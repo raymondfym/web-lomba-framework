@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
     <link rel="stylesheet" href="<?= base_url('css/bootstrap.css') ?>">
     <!-- Chart -->
     <link rel="stylesheet" href="<?= base_url('vendors/apexcharts/apexcharts.css') ?>">
-    
+
     <!-- DataTable -->
     <link rel="stylesheet" href="<?= base_url('vendors/simple-datatables/style.css') ?>">
 
@@ -64,10 +65,28 @@
                                         LCT
                                     </a>
                                 </li>
-
                             </ul>
                         </li>
-
+                        <li class="sidebar-item has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-trophy-fill"></i>
+                                <span>Settings</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="/admin/settings">
+                                        <i class="bi bi-circle"></i>
+                                        Kategori Lomba
+                                    </a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="/settings">
+                                        <i class="bi bi-circle"></i>
+                                        Kategori Peserta
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
@@ -81,9 +100,7 @@
                             <i class="bi bi-justify fs-3"></i>
                         </a>
 
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -106,11 +123,10 @@
                                         <li>
                                             <h6 class="dropdown-header">Hello, Ucok!</h6>
                                         </li>
-                                
-                                            <hr class="dropdown-divider">
+
+                                        <hr class="dropdown-divider">
                                         </li>
-                                        <li><a class="dropdown-item" href="#"><i
-                                            class="icon-mid bi bi-box-arrow-left me-2"></i> Logout</a></li>
+                                        <li><a class="dropdown-item" href="#"><i class="icon-mid bi bi-box-arrow-left me-2"></i> Logout</a></li>
                                     </ul>
                                 </div>
                             </ul>
@@ -129,7 +145,7 @@
     <script src="<?= base_url('vendors/dayjs/dayjs.min.js') ?>"></script>
     <script src="<?= base_url('vendors/apexcharts/apexcharts.js') ?>"></script>
     <script src="<?= base_url('js/pages/ui-apexchart.js') ?>"></script>
-    
+
     <!-- Sweet Alert -->
     <script src="<?= base_url('js/extensions/sweetalert2.js') ?>"></script>
     <script src="<?= base_url('vendors/sweetalert2/sweetalert2.all.min.js') ?>"></script>

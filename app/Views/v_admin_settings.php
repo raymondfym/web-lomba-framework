@@ -30,7 +30,7 @@
                                 <td><?= $i + 1; ?></td>
                                 <td><?= $row['nama_lomba']; ?></td>
                                 <td>
-                                    <?php if ($row['status'] == 'Aktif') : ?>
+                                    <?php if ($row['status'] == 1) : ?>
                                         <span class="badge bg-success">Aktif</span>
                                     <?php else : ?>
                                         <span class="badge bg-danger">Non Aktif</span>
@@ -165,9 +165,9 @@
                                 <div class="form-group">
                                     <label>Status</label>
                                     <select name="status" class="form-control">
-                                        <option value="">Pilih</option>
+                                        <option>Pilih</option>
                                         <?php foreach ($status as $row) : ?>
-                                            <option value="<?= $row->id; ?>"><?= $row->jenis_status; ?></option>
+                                            <option value="<?= $row->id; ?>"><?= $row->status; ?></option>
                                         <?php endforeach; ?>
                                     </select>
                                 </div>

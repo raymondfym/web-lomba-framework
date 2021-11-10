@@ -35,6 +35,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/administrator', 'Admin::index');
 $routes->get('/admin/cpc', 'Admin::lomba_cpc');
 $routes->get('/admin/lct', 'Admin::lomba_lct');
+$routes->get('/settings', 'Admin::settings');
 
 /*
  * --------------------------------------------------------------------
