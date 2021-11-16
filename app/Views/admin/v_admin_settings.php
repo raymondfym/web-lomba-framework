@@ -1,5 +1,8 @@
-<?= $this->extend('layout/admin_layout') ?>
-<?= $this->section('content') ?>
+<?= $this->include('layout/header') ?>
+<!-- Tambah Style -->
+<!-- ... -->
+<?= $this->include('layout/sidebar') ?>
+<?= $this->include('layout/navbar') ?>
 
 <div id="main-content">
     <div class="page-heading">
@@ -7,11 +10,16 @@
             <div class="row">
                 <div class="col-12 col-md-6 order-md-1 order-last">
                     <h3>Kategori Lomba</h3>
+                    <p class="text-subtitle text-muted">Data Lomba di Web Lomba</p>
                 </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-body">
+        <section class="section">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Data Perlombaan</h4>
+                </div>
+                <div class="card-body">
                 <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modal-tambah">
                     <i class="bi bi-pencil-square"></i> Tambah Lomba
                 </button>
@@ -52,74 +60,8 @@
                     </tbody>
                 </table>
             </div>
-        </div>
         </section>
-    </div>
-
-    <div>
         <section>
-            <!-- Modal -->
-            <!-- Detail -->
-            <!-- <div class="modal fade" id="modal-detail" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalCenterTitle">
-                                Data Peserta
-                            </h5>
-                        </div>
-                        <div class="modal-body">
-                            <table class="table table-striped">
-                                <tr>
-                                    <td>Nama</td>
-                                    <td>Graiden</td>
-                                </tr>
-                                <tr>
-                                    <td>Email</td>
-                                    <td>vehicula.aliquet@semconsequat.co.uk</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
-                                <i class="bx bx-x d-block d-sm-none"></i>
-                                <span class="d-none d-sm-block">Close</span>
-                            </button>
-                            <button type="button" class="btn btn-primary ml-1" data-bs-dismiss="modal">
-                                <i class="bx bx-check d-block d-sm-none"></i>
-                                <span class="d-none d-sm-block">Accept</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- Validasi -->
-            <!-- <div class="modal fade" id="modal-validasi" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalCenterTitle">
-                                Data Peserta
-                            </h5>
-                        </div>
-                        <div class="modal-body">
-                            <p class="d-flex justify-content-center">
-                                Validasi akun Gaiden?
-                            </p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
-                                <i class="bx bx-x d-block d-sm-none"></i>
-                                <span class="d-none d-sm-block">Close</span>
-                            </button>
-                            <button type="button" class="btn btn-primary ml-1" data-bs-dismiss="modal">
-                                <i class="bx bx-check d-block d-sm-none"></i>
-                                <span class="d-none d-sm-block">Accept</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <!-- Hapus -->
             <div class="modal fade" id="modal-hapus" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable" role="document">
@@ -189,21 +131,7 @@
         </section>
     </div>
 
-    <footer>
-        <div class="footer clearfix mb-0 text-muted">
-            <div class="float-end">
-                <p>Made<span class="text-danger"></span> by
-                    <a href="https://github.com/deana00">
-                        Ardella Awalia
-                    </a>
-                    &
-                    <a href="https://github.com/raymondfym" target="_blank">
-                        Raymond Yandika
-                    </a>
-                </p>
-            </div>
-        </div>
-    </footer>
-</div>
-
-<?= $this->endSection() ?>
+<?= $this->include('layout/footer_comment') ?>
+<!-- Tambah Script -->
+<!-- ... -->
+<?= $this->include('layout/footer') ?>

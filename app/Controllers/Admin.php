@@ -6,17 +6,17 @@ class Admin extends BaseController
 {
     public function index()
     {
-        return view('v_admin_index');
+        return view('admin/v_admin_index');
     }
 
     public function lomba_cpc()
     {
-        return view('v_lomba_cpc');
+        return view('admin/v_lomba_cpc');
     }
 
     public function lomba_lct()
     {
-        return view('v_lomba_lct');
+        return view('admin/v_lomba_lct');
     }
 
     public function settings()
@@ -30,7 +30,7 @@ class Admin extends BaseController
             'lomba' => $KLomba->findAll(),
             'status' => $KLomba->getStatus()->getResult()
         ];
-        return view('v_admin_settings', $data);
+        return view('admin/v_admin_settings', $data);
     }
 
     public function save()
