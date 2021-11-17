@@ -44,4 +44,12 @@ class Admin extends BaseController
         $KLomba->insert($data);
         return redirect()->to('/settings');
     }
+
+    public function delete()
+    {
+        $KLomba = model('KategoriLombaModel');
+        $id = $this->request->getPost('id');
+        $KLomba->delete($id);
+        return redirect()->to('/settings');
+    }
 }

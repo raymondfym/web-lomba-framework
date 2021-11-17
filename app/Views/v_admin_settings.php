@@ -121,32 +121,36 @@
                 </div>
             </div> -->
             <!-- Hapus -->
-            <div class="modal fade" id="modal-hapus" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalCenterTitle">
-                                Hapus Lomba
-                            </h5>
-                        </div>
-                        <div class="modal-body">
-                            <p class="d-flex justify-content-center">
-                                Apakah Anda yakin ingin menghapus kategori lomba ini?
-                            </p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
-                                <i class="bx bx-x d-block d-sm-none"></i>
-                                <span class="d-none d-sm-block">Batal</span>
-                            </button>
-                            <button type="button" class="btn btn-danger ml-1" data-bs-dismiss="modal">
-                                <i class="bx bx-check d-block d-sm-none"></i>
-                                <span class="d-none d-sm-block">Hapus</span>
-                            </button>
+            <form action="/admin/delete" method="post">
+                <div class="modal fade" id="modal-hapus" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalCenterTitle">
+                                    Hapus Lomba
+                                </h5>
+                            </div>
+                            <div class="modal-body">
+                                <p class="d-flex justify-content-center">
+                                    Apakah Anda yakin ingin menghapus kategori lomba ini?
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="hidden" name="id" class="lomba_id">
+                                <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                                    <i class="bx bx-x d-block d-sm-none"></i>
+                                    <span class="d-none d-sm-block">Batal</span>
+                                </button>
+                                <button type="button" class="btn btn-danger ml-1" data-bs-dismiss="modal">
+                                    <i class="bx bx-check d-block d-sm-none"></i>
+                                    <span class="d-none d-sm-block">Hapus</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
+
             <!-- Tambah -->
             <form action="/admin/save" method="post">
                 <div class="modal fade" id="modal-tambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -160,12 +164,12 @@
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label>Nama Lomba</label>
-                                    <input type="text" name="nama_lomba" class="form-control">
+                                    <input type="text" name="nama_lomba" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Status</label>
-                                    <select name="status" class="form-control">
-                                        <option>Pilih</option>
+                                    <select name="status" class="form-select" required>
+                                        <option value="" selected disabled>Pilih</option>
                                         <?php foreach ($status as $row) : ?>
                                             <option value="<?= $row->id; ?>"><?= $row->status; ?></option>
                                         <?php endforeach; ?>
@@ -177,7 +181,7 @@
                                     <i class="bx bx-x d-block d-sm-none"></i>
                                     <span class="d-none d-sm-block">Batal</span>
                                 </button>
-                                <button type="submit" class="btn btn-primary ml-1" form="modal-tambah">
+                                <button type="submit" class="btn btn-primary ml-1">
                                     <i class="bx bx-check d-block d-sm-none"></i>
                                     <span class="d-none d-sm-block">Tambah</span>
                                 </button>

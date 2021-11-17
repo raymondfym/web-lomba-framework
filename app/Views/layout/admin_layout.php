@@ -159,6 +159,39 @@
     </script>
 
     <script src="<?= base_url('js/main.js') ?>"></script>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            // get Edit Product
+            $('.btn-edit').on('click', function() {
+                // get data from button edit
+                const id = $(this).data('id');
+                const nama_lomba = $(this).data('nama');
+                const status = $(this).data('status');
+                // const category = $(this).data('category_id');
+                // Set data to Form Edit
+                $('.id').val(id);
+                $('.nama_lomba').val(nama);
+                $('.status').val(status);
+                // $('.product_category').val(category).trigger('change');
+                // Call Modal Edit
+                $('#editModal').modal('show');
+            });
+
+            // get Delete Product
+            $('.btn-delete').on('click', function() {
+                // get data from button edit
+                const id = $(this).data('id');
+                // Set data to Form Edit
+                $('.lomba_id').val(id);
+                // Call Modal Edit
+                $('#modal-hapus').modal('show');
+            });
+        });
+    </script>
 </body>
 
 </html>
