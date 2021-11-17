@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Webpage Title -->
     <title>Project Final Web Lanjut</title>
-    
+
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/fontawesome-all.min.css" rel="stylesheet">
-    <link href="css/swiper.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
-	
-	<!-- Favicon  -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Favicon  -->
     <link rel="icon" href="images/logoUnila.png">
 </head>
+
 <body data-bs-spy="scroll" data-bs-target="#navbarExample">
-    
+
     <!-- Navigation -->
     <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-light" aria-label="Main navigation">
         <div class="container">
@@ -27,7 +28,7 @@
             <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a>  -->
 
             <!-- Logo Teks -->
-            <a class="navbar-brand logo-text my-3" href="/">Lomba</a>
+            <a class="navbar-brand logo-text my-3" href="/">Logo Lomba</a>
 
             <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,14 +47,13 @@
                     </li>
                 </ul>
                 <span class="nav-item">
-                    <a class="btn-solid-reg-secondary" href="#">Login</a>
+                    <a href="/login" class="btn-solid-reg-secondary">Login</a>
                 </span>
             </div> <!-- end of navbar-collapse -->
         </div> <!-- end of container -->
     </nav> <!-- end of navbar -->
     <!-- end of navigation -->
 
-      
     <!-- Header -->
     <header id="header" class="header">
         <div class="container">
@@ -78,7 +78,7 @@
     </header> <!-- end of header -->
     <!-- end of header -->
 
-    <!-- Details 1 -->
+    <!-- About 1 -->
     <div id="about" class="basic-1">
         <div class="container mt-5">
             <div class="row">
@@ -92,64 +92,14 @@
                         <h2><span>Lomba Nasional</span><br> Ilmu Komputer</h2>
                         <p>Maecenas fringilla quam posuere, pellentesque est nec, gravida turpis. Integer vitae mollis felis. Integer id quam id tellus hendrerit laciniad binfer</p>
                         <p>Sed id dui rutrum, dictum urna eu, accumsan turpis. Fusce id auctor velit, sed viverra dui rem dina</p>
-                        <!-- <a class="btn-solid-reg" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modal</a> -->
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of basic-1 -->
-    <!-- end of details 1 -->
+    <!-- end of About 1 -->
 
-
-    <!-- Details Modal -->
-    <div id="staticBackdrop" class="modal fade" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="row">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="col-lg-8">
-                        <div class="image-container">
-                            <img class="img-fluid" src="images/details-modal.jpg" alt="alternative">
-                        </div> <!-- end of image-container -->
-                    </div> <!-- end of col -->
-                    <div class="col-lg-4">
-                        <h3>Goals Setting</h3>
-                        <hr>
-                        <p>In gravida at nunc sodales pretium. Vivamus semper, odio vitae mattis auctor, elit elit semper magna ac tum nico vela spider</p>
-                        <h4>User Feedback</h4>
-                        <p>Sapien vitae eros. Praesent ut erat a tellus posuere nisi more thico cursus pharetra finibus posuere nisi. Vivamus feugiat</p>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="d-flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div class="flex-grow-1">Tincidunt sem vel brita bet mala</div>
-                            </li>
-                            <li class="d-flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div class="flex-grow-1">Sapien condimentum sacoz sil necr</div>
-                            </li>
-                            <li class="d-flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div class="flex-grow-1">Fusce interdum nec ravon fro urna</div>
-                            </li>
-                            <li class="d-flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div class="flex-grow-1">Integer pulvinar biolot bat tortor</div>
-                            </li>
-                            <li class="d-flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div class="flex-grow-1">Id ultricies fringilla fangor raq trinit</div>
-                            </li>
-                        </ul>
-                        <a id="modalCtaBtn" class="btn-solid-reg" href="#">Details</a>
-                        <button type="button" class="btn-outline-reg" data-bs-dismiss="modal">Close</button>
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-            </div> <!-- end of modal-content -->
-        </div> <!-- end of modal-dialog -->
-    </div> <!-- end of modal -->
-    <!-- end of details modal -->
-
-     <!-- Pricing -->
+    <!-- Lomba -->
     <div id="events" class="cards-2">
         <div class="container mt-3">
             <div class="row">
@@ -185,65 +135,62 @@
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of cards-2 -->
-    <!-- end of pricing -->
+    <!-- end of Lomba -->
 
 
-        <!-- Footer -->
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="footer-col first">
-                            <h6>About Us</h6>
-                            <p class="p-small">Proin ut felis purus vestibulum in orci molestie, efficitur lacus ac pellentesque elit. Fusce mollis laoreet lobortis nulla ac efficitur lacus ac </p>
-                        </div> <!-- end of footer-col -->
-                        
-                        <!-- end of footer-col -->
-                        <div class="footer-col third">
-                            <span class="fa-stack">
-                                <a href="#facebook">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
-                                </a>
-                            </span>
-                            <span class="fa-stack">
-                                <a href="#twitter">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-twitter fa-stack-1x"></i>
-                                </a>
-                            </span>
-                            <span class="fa-stack">
-                                <a href="#instagram">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-instagram fa-stack-1x"></i>
-                                </a>
-                            </span>
-                            <span class="fa-stack">
-                                <a href="#whatsapp">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-whatsapp fa-stack-1x"></i>
-                                </a>
-                            </span>
-                            <!-- <p class="p-small">Quam posuerei pellent esque vam <a href="mailto:contact@site.com"><strong>contact@site.com</strong></a></p> -->
-                        </div> <!-- end of footer-col -->
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-            </div> <!-- end of container -->
-        </div> <!-- end of footer -->  
-        <!-- end of footer -->
-    
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-col first">
+                        <h6>About Us</h6>
+                        <p class="p-small">Proin ut felis purus vestibulum in orci molestie, efficitur lacus ac pellentesque elit. Fusce mollis laoreet lobortis nulla ac efficitur lacus ac </p>
+                    </div> <!-- end of footer-col -->
+
+                    <!-- end of footer-col -->
+                    <div class="footer-col third">
+                        <span class="fa-stack">
+                            <a href="#facebook">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#twitter">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#instagram">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#whatsapp">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-whatsapp fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <!-- <p class="p-small">Quam posuerei pellent esque vam <a href="mailto:contact@site.com"><strong>contact@site.com</strong></a></p> -->
+                    </div> <!-- end of footer-col -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->
+    <!-- end of footer -->
+
 
     <!-- Back To Top Button -->
     <button onclick="topFunction()" id="myBtn">
         <img src="images/up-arrow.png" alt="alternative">
     </button>
     <!-- end of back to top button -->
-    	
+
     <!-- Scripts -->
     <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-    <script src="js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
-    <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
 </body>
+
 </html>

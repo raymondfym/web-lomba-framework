@@ -55,13 +55,13 @@
                             <ul class="submenu ">
                                 <li class="submenu-item ">
                                     <a href="/admin/cpc">
-                                        <i class="bi bi-circle"></i>
+                                        <i class="bi bi-chevron-right"></i>
                                         CPC
                                     </a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="/admin/lct">
-                                        <i class="bi bi-circle"></i>
+                                        <i class="bi bi-chevron-right"></i>
                                         LCT
                                     </a>
                                 </li>
@@ -69,19 +69,19 @@
                         </li>
                         <li class="sidebar-item has-sub">
                             <a href="#" class='sidebar-link'>
-                                <i class="bi bi-trophy-fill"></i>
+                                <i class="bi bi-gear"></i>
                                 <span>Settings</span>
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
                                     <a href="/admin/settings">
-                                        <i class="bi bi-circle"></i>
+                                        <i class="bi bi-chevron-right"></i>
                                         Kategori Lomba
                                     </a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="/settings">
-                                        <i class="bi bi-circle"></i>
+                                        <i class="bi bi-chevron-right"></i>
                                         Kategori Peserta
                                     </a>
                                 </li>
