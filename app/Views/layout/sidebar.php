@@ -23,10 +23,16 @@
 								<span>Dashboard</span>
 							</a>
 						</li>
+						<li class="sidebar-item ">
+							<a href="/admin/lomba/info" class='sidebar-link'>
+								<i class="bi bi-info-circle-fill"></i>
+								<span>Informasi Lomba</span>
+							</a>
+						</li>
 						<li class="sidebar-item has-sub">
 							<a href="#" class='sidebar-link'>
 								<i class="bi bi-trophy-fill"></i>
-								<span>Lomba</span>
+								<span>Peserta Lomba</span>
 							</a>
 							<ul class="submenu ">
 								<li class="submenu-item ">
@@ -46,7 +52,7 @@
 						<li class="sidebar-item ">
 							<a href="/admin/akun" class='sidebar-link'>
 								<i class="bi bi-person-fill"></i>
-								<span>Akun</span>
+								<span>Akses Panitia</span>
 							</a>
 						</li>
 						<li class="sidebar-item has-sub">

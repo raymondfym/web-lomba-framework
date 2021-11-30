@@ -1,6 +1,8 @@
 <?= $this->include('layout/header') ?>
 <!-- Tambah Style -->
-<!-- ... -->
+<!-- DataTable -->
+<link rel="stylesheet" href="<?= base_url('vendors/simple-datatables/style.css') ?>">
+
 <?= $this->include('layout/sidebar') ?>
 <?= $this->include('layout/navbar') ?>
 
@@ -191,5 +193,11 @@
 
     <?= $this->include('layout/footer_comment') ?>
     <!-- Tambah Script -->
-    <!-- ... -->
+    <!-- Table Database -->
+	<script src="<?= base_url('vendors/simple-datatables/simple-datatables.js') ?>"></script>
+	<script>
+		// Simple Datatable
+		let table1 = document.querySelector('#table1');
+		let dataTable = new simpleDatatables.DataTable(table1);
+	</script>
     <?= $this->include('layout/footer') ?>

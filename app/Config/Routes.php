@@ -35,10 +35,14 @@ $routes->get('/', 'Home::index');
 $routes->get('/login', 'Home::login');
 $routes->get('/register', 'Home::register');
 $routes->get('/admin', 'Admin::index');
+$routes->get('/admin/lomba/info', 'Admin::info_lomba');
+$routes->get('/admin/lomba/info/edit', 'Home::info_lomba_edit');
 $routes->get('/admin/akun', 'Home::akun');
 $routes->get('/admin/cpc', 'Admin::lomba_cpc');
 $routes->get('/admin/lct', 'Admin::lomba_lct');
 $routes->get('/settings', 'Admin::settings');
+
+$routes->get('/user', 'User::index');
 
 $routes->get('/template', 'Home::template');
 
