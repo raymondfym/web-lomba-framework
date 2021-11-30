@@ -1,6 +1,7 @@
 <?= $this->include('layout/header') ?>
 <!-- Tambah Style -->
-<!-- ... -->
+<!-- DataTable -->
+<link rel="stylesheet" href="<?= base_url('vendors/simple-datatables/style.css') ?>">
 <?= $this->include('layout/sidebar') ?>
 <?= $this->include('layout/navbar') ?>
 
@@ -58,23 +59,26 @@
                 </div>
                 <div class="card-body">
                     <!-- Account Table -->
+                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modal-tambah-akun">
+                        <i class="bi bi-pencil-square"></i> Tambah Lomba
+                    </button>
                     <table class="table table-sm table-striped" id="table1">
                         <thead>
                             <tr>
-                                <th>Nama</th>
-                                <th>Lomba</th>
                                 <th>Username</th>
+                                <th>Nama</th>
                                 <th>Token Password</th>
+                                <th>Divisi</th>
                                 <th>Lever User</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
+                                <td>Bejo_Y</td>
                                 <td>Bejo</td>
+                                <td>lomba_bejo</td>
                                 <td>CPC</td>
-                                <td>bejo_cpc@lomba.com</td>
-                                <td>test123</td>
                                 <td><span class="badge bg-warning">Koor Lomba</span></td>
                                 <td>
                                     <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#modal-edit">
@@ -162,11 +166,66 @@
                     </div>
                 </div>
             </div>
+            <!-- Modal Tambah Data -->
+            <div class="modal fade" id="modal-tambah-akun" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">
+                                Tambah Akun
+                            </h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Username</label>
+                                <input type="text" name="username" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Nama</label>
+                                <input type="text" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Token Password</label>
+                                <input type="text" name="token_password" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Divisi</label>
+                                <input type="text" name="divition" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Level User</label>
+                                <select class="form-control" name="user_level">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                                <i class="bx bx-x d-block d-sm-none"></i>
+                                <span class="d-none d-sm-block">Batal</span>
+                            </button>
+                            <button type="submit" class="btn btn-primary ml-1">
+                                <i class="bx bx-check d-block d-sm-none"></i>
+                                <span class="d-none d-sm-block">Tambah</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
         <!-- End Modal Section -->
     </div>
 
     <?= $this->include('layout/footer_comment') ?>
     <!-- Tambah Script -->
-    <!-- ... -->
+    <!-- Table Database -->
+    <script src="<?= base_url('vendors/simple-datatables/simple-datatables.js') ?>"></script>
+    <script>
+        // Simple Datatable
+        let table1 = document.querySelector('#table1');
+        let dataTable = new simpleDatatables.DataTable(table1);
+    </script>
     <?= $this->include('layout/footer') ?>

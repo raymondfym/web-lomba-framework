@@ -24,4 +24,8 @@ class Home extends BaseController
     {
         return view('admin/v_admin_akun');
     }
+    public function info_lomba_edit()
+    {
+        return view('admin/v_info_lomba_edit');
+    }
 }

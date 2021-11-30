@@ -1,6 +1,7 @@
 <?= $this->include('layout/header') ?>
 <!-- Tambah Style -->
-<!-- ... -->
+<!-- DataTable -->
+<link rel="stylesheet" href="<?= base_url('vendors/simple-datatables/style.css') ?>">
 <?= $this->include('layout/sidebar') ?>
 <?= $this->include('layout/navbar') ?>
 
@@ -20,45 +21,46 @@
                     <h4>Data Perlombaan</h4>
                 </div>
                 <div class="card-body">
-                <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modal-tambah">
-                    <i class="bi bi-pencil-square"></i> Tambah Lomba
-                </button>
-                <table class="table table-sm table-striped" id="table1">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Nama Lomba</th>
-                            <th>Status</th>
-                            <th>Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($lomba as $i => $row) : ?>
+                    <button type="button" class="btn btn-sm btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modal-tambah">
+                        <i class="bi bi-pencil-square"></i> Tambah Lomba
+                    </button>
+                    <table class="table table-sm table-striped" id="table1">
+                        <thead>
                             <tr>
-                                <td><?= $i + 1; ?></td>
-                                <td><?= $row['nama_lomba']; ?></td>
-                                <td>
-                                    <?php if ($row['status'] == 1) : ?>
-                                        <span class="badge bg-success">Aktif</span>
-                                    <?php else : ?>
-                                        <span class="badge bg-danger">Non Aktif</span>
-                                    <?php endif; ?>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#modal-edit">
-                                        <i class="bi bi-receipt"></i>
-                                    </button>
-                                    <!-- <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modal-validasi">
+                                <th>No</th>
+                                <th>Nama Lomba</th>
+                                <th>Status</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($lomba as $i => $row) : ?>
+                                <tr>
+                                    <td><?= $i + 1; ?></td>
+                                    <td><?= $row['nama_lomba']; ?></td>
+                                    <td>
+                                        <?php if ($row['status'] == 1) : ?>
+                                            <span class="badge bg-success">Aktif</span>
+                                        <?php else : ?>
+                                            <span class="badge bg-danger">Non Aktif</span>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#modal-edit">
+                                            <i class="bi bi-receipt"></i>
+                                        </button>
+                                        <!-- <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modal-validasi">
                                         <i class="bi bi-check-circle"></i>
                                     </button> -->
-                                    <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modal-hapus">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
+                                        <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modal-hapus">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
         <section>
@@ -135,7 +137,13 @@
         </section>
     </div>
 
-<?= $this->include('layout/footer_comment') ?>
-<!-- Tambah Script -->
-<!-- ... -->
-<?= $this->include('layout/footer') ?>
+    <?= $this->include('layout/footer_comment') ?>
+    <!-- Tambah Script -->
+    <!-- Table Database -->
+	<script src="<?= base_url('vendors/simple-datatables/simple-datatables.js') ?>"></script>
+	<script>
+		// Simple Datatable
+		let table1 = document.querySelector('#table1');
+		let dataTable = new simpleDatatables.DataTable(table1);
+	</script>
+    <?= $this->include('layout/footer') ?>

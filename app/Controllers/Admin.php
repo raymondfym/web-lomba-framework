@@ -9,6 +9,11 @@ class Admin extends BaseController
         return view('admin/v_admin_index');
     }
 
+    public function info_lomba()
+    {
+        return view('admin/v_info_lomba');
+    }
+
     public function lomba_cpc()
     {
         return view('admin/v_lomba_cpc');
