@@ -50,11 +50,22 @@ class Admin extends BaseController
         return redirect()->to('/settings');
     }
 
-    public function delete()
-    {
-        $KLomba = model('KategoriLombaModel');
-        $id = $this->request->getPost('id');
-        $KLomba->delete($id);
-        return redirect()->to('/settings');
+    public function delete($id)
+    {   
+        $KLomba = model("KategoriLombaModel");
+        $KLomba->where('id', $id)->delete();
+        // session()->setFlashdata('pesan', 'Data berhasil dihapus');
+        return redirect()->to(base_url('/settings'));
     }
+
+    public function update($id)
+	{
+        $KLomba = model("KategoriLombaModel");
+        $data = [
+            'nama_lomba' => $this->request->getVar("nama_lomba"),
+            'status' => $this->request->getVar("status"),
+        ];
+		$KLomba->update($id, $data);
+		return redirect()->to(base_url('/settings'));
+	}
 }

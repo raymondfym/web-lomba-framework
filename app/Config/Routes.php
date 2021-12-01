@@ -46,6 +46,10 @@ $routes->get('/user', 'User::index');
 
 $routes->get('/template', 'Home::template');
 
+
+$routes->delete('/settings/delete/(:segment)', 'Admin::delete/$1');
+$routes->post('/settings/update/(:segment)', 'Admin::update/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
