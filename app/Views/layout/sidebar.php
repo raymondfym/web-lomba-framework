@@ -62,13 +62,13 @@
 							</a>
 							<ul class="submenu ">
 								<li class="submenu-item ">
-									<a href="/settings">
+									<a href="/settings/lomba">
 										<i class="bi bi-chevron-right"></i>
 										Kategori Lomba
 									</a>
 								</li>
 								<li class="submenu-item ">
-									<a href="/settings">
+									<a href="/settings/peserta">
 										<i class="bi bi-chevron-right"></i>
 										Kategori Peserta
 									</a>

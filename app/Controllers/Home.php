@@ -10,11 +10,13 @@ class Home extends BaseController
     }
     public function login()
     {
-        return view('v_login');
+        return view('auth/v_login');
+        // return view('auth/login');
     }
     public function register()
     {
-        return view('v_register');
+        return view('auth/v_register');
+        // return view('auth/register');
     }
     public function template()
     {

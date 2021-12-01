@@ -24,18 +24,25 @@ class Admin extends BaseController
         return view('admin/v_lomba_lct');
     }
 
-    public function settings()
+    public function settings_lomba()
     {
         $KLomba = model('KategoriLombaModel');
-        // $SLomba = model('StatusLombaModel');
-        // $KPeserta = model('KategoriPesertaModel');
-        // $Users = model('UsersModel');
 
         $data = [
             'lomba' => $KLomba->findAll(),
             'status' => $KLomba->getStatus()->getResult()
         ];
-        return view('admin/v_admin_settings', $data);
+        return view('admin/v_admin_settings_lomba', $data);
+    }
+
+    public function settings_peserta()
+    {
+        $KPeserta = model('KategoriPesertaModel');
+
+        $data = [
+            'kategori' => $KPeserta->findAll()
+        ];
+        return view('admin/v_admin_settings_peserta', $data);
     }
 
     public function save()

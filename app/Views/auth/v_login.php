@@ -21,73 +21,72 @@
                 <div class="card">
                     <div class="d-flex justify-content-center mt-3">
                         <!-- <img src="images/logoUnila.png" class="logo-login rounded img-thumbnail" alt="...">                         -->
-                        <h4 class="card-title">Register</h4>
+                        <h4 class="card-title">Login</h4>
                     </div>
 
                     <div>
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-12">
-                                    <form class="form form-vertical">
+                            <form action="<?= route_to('login') ?>" class="form form-vertical" method="post">
+                                <?= csrf_field() ?>
+                                <div class="row">
+                                    <div class="col-12">
                                         <div class="form-body">
                                             <div class="row">
-                                                <!-- Form Email -->
+
                                                 <div class="col-12">
                                                     <div class="form-group has-icon-left">
-                                                        <label for="email-id-icon">Email</label>
+                                                        <!-- <label for="email-id-icon">Email</label> -->
+                                                        <label for="login"><?= lang('Auth.email') ?></label>
                                                         <div class="position-relative">
-                                                            <input type="text" class="form-control" placeholder="Email" id="email-id-icon">
+                                                            <!-- <input type="text" class="form-control" placeholder="Email" id="email-id-icon"> -->
                                                             <div class="form-control-icon">
                                                                 <i class="bi bi-envelope"></i>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- Form Nama Lengkap -->
-                                                <div class="col-12">
-                                                    <div class="form-group has-icon-left">
-                                                        <label for="name-id-icon">Nama Lengkap</label>
-                                                        <div class="position-relative">
-                                                            <input type="text" class="form-control" placeholder="Nama Lengkap" id="name-id-icon">
-                                                            <div class="form-control-icon">
-                                                                <i class="bi bi-person"></i>
+                                                            <input type="email" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" name="login" placeholder="<?= lang('Auth.email') ?>">
+                                                            <div class="invalid-feedback">
+                                                                <?= session('errors.login') ?>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!-- Form No Telepon -->
+
                                                 <div class="col-12">
                                                     <div class="form-group has-icon-left">
-                                                        <label for="phone-id-icon">Nomor Telepon</label>
+                                                        <label for="password-id-icon"><?= lang('Auth.password') ?></label>
                                                         <div class="position-relative">
-                                                            <input type="text" class="form-control" placeholder="Nomor Telepon" id="phone-id-icon">
-                                                            <div class="form-control-icon">
-                                                                <i class="bi bi-phone"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="form-group has-icon-left">
-                                                        <label for="password-id-icon">Password</label>
-                                                        <div class="position-relative">
-                                                            <input type="password" class="form-control" placeholder="Password" id="password-id-icon">
+                                                            <input type="password" class="form-control <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?= lang('Auth.password') ?>" id="password-id-icon">
                                                             <div class="form-control-icon">
                                                                 <i class="bi bi-lock"></i>
                                                             </div>
+                                                            <div class="invalid-feedback">
+                                                                <?= session('errors.password') ?>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <button type="submit" class="btn btn-primary me-1 my-3">Register</button>
+
+                                                <div class="col-12">
+                                                    <div class='form-check'>
+                                                        <div class="checkbox mt-2">
+                                                            <input type="checkbox" name="remember" class="form-check-input" <?php if (old('remember')) : ?> checked <?php endif ?>>
+                                                            <label for="remember-me-v">Remember Me</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <button type="submit" class="btn btn-primary me-1 mt-4 "><?= lang('Auth.loginAction') ?></button>
                                             </div>
                                         </div>
-                                        <div class="div d-flex justify-content-center">
-                                            <p>Sudah punya akun? <a href="/login">login</a></p>
-                                        </div>
-                                    </form>
-
+                                    </div>
+                                    <div>
+                                        <hr>
+                                        <!-- <p class="d-flex justify-content-center">Atau</p> -->
+                                    </div>
+                                    <div class="div d-flex justify-content-center">
+                                        <p><a href="<?= route_to('register') ?>"><?= lang('Auth.needAnAccount') ?></a></p>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>

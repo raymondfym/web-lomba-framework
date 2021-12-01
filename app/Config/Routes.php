@@ -31,18 +31,25 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
-$routes->get('/login', 'Home::login');
-$routes->get('/register', 'Home::register');
-$routes->get('/admin', 'Admin::index');
-$routes->get('/admin/lomba/info', 'Admin::info_lomba');
-$routes->get('/admin/lomba/info/edit', 'Home::info_lomba_edit');
-$routes->get('/admin/akun', 'Home::akun');
-$routes->get('/admin/cpc', 'Admin::lomba_cpc');
-$routes->get('/admin/lct', 'Admin::lomba_lct');
-$routes->get('/settings', 'Admin::settings');
+// $routes->get('/', 'Home::index');
+// $routes->get('/login', 'Home::login');
+// $routes->get('/register', 'Home::register');
 
-$routes->get('/user', 'User::index');
+// ADMIN ROLE
+$routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
+    $routes->get('/', 'Admin::index');
+    $routes->get('lomba/info', 'Admin::info_lomba');
+    $routes->get('lomba/info/edit', 'Home::info_lomba_edit');
+    // $routes->get('/admin/akun', 'Home::akun', ['filter' => 'role:admin']);
+    $routes->get('cpc', 'Admin::lomba_cpc');
+    $routes->get('lct', 'Admin::lomba_lct');
+    $routes->get('lomba', 'Admin::settings_lomba');
+    $routes->get('peserta', 'Admin::settings_peserta');
+});
+
+$routes->group('user', ['filter' => 'role:user'], function ($routes) {
+    $routes->get('/', 'User::index');
+});
 
 $routes->get('/template', 'Home::template');
 
