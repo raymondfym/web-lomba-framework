@@ -9,32 +9,32 @@
 							<span class="navbar-toggler-icon"></span>
 						</button>
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav ms-auto mb-lg-0">
-                                <div class="dropdown">
-                                    <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <div class="user-menu d-flex">
-                                            <div class="user-name text-end me-3">
-                                                <h6 class="mb-0 text-gray-600">Ucok</h6>
-                                                <p class="mb-0 text-sm text-gray-600">Administrator</p>
-                                            </div>
-                                            <div class="user-img d-flex align-items-center">
-                                                <div class="avatar avatar-md">
-                                                    <img src="<?= base_url('images/faces/1.jpg') ?>">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                        <li>
-                                            <h6 class="dropdown-header">Hello, Ucok!</h6>
-                                        </li>
+							<ul class="navbar-nav ms-auto mb-lg-0">
+								<div class="dropdown">
+									<a href="#" data-bs-toggle="dropdown" aria-expanded="false">
+										<div class="user-menu d-flex">
+											<div class="user-name text-end me-3">
+												<h6 class="mb-0 text-gray-600"><?= user()->username; ?></h6>
+												<p class="mb-0 text-sm text-gray-600">Administrator</p>
+											</div>
+											<div class="user-img d-flex align-items-center">
+												<div class="avatar avatar-md">
+													<img src="<?= base_url('images/faces/1.jpg') ?>">
+												</div>
+											</div>
+										</div>
+									</a>
+									<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+										<li>
+											<h6 class="dropdown-header">Hello, <?= user()->username; ?></h6>
+										</li>
 
-                                        <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="#"><i class="icon-mid bi bi-box-arrow-left me-2"></i> Logout</a></li>
-                                    </ul>
-                                </div>
-                            </ul>
+										<hr class="dropdown-divider">
+										</li>
+										<li><a class="dropdown-item" href="<?= base_url('logout'); ?>"><i class="icon-mid bi bi-box-arrow-left me-2"></i> Logout</a></li>
+									</ul>
+								</div>
+							</ul>
 						</div>
 					</div>
 				</nav>
